@@ -22,6 +22,9 @@ const dummyEducations = [
 
 const Education = () => {
     const [educations, setEducations] = useState(dummyEducations)
+    const [add, setAdd] = useState(false)
+    const [edit, setEdit] = useState(false)
+
     useEffect(() => {
         localStorage.getItem('educations') ? setEducations(JSON.parse(localStorage.getItem('educations'))) : setEducations(dummyEducations)
     }, [])
