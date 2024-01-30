@@ -52,15 +52,15 @@ const Posts = () => {
               <div className='text-sm font-semibold ml-6 my-3'>{post.caption}</div>
             </div>
             <div className='w-full h-1/2'>
-              <img src={post.image} alt="" className='w-full max-h-28 object-cover' />
+              <img src={post.image} alt="" className='w-full max-h-28 object-cover rounded-sm' />
             </div>
             <div className='w-full h-1/2 p-4 flex flex-col justify-between items-start'>
               <div className='flex flex-row justify-between items-center w-full'>
-                <div className='flex flex-row justify-start items-center space-x-4'>
+                <div className='flex flex-row justify-start items-center'>
                   <FaThumbsUp className='w-4 h-4 mr-1 text-violet-400' />
-                  <div className='text-sm font-semibold text-violet-500'>{post.likes}</div>
+                  <div className='text-sm font-semibold text-violet-500 mr-3'>{post.likes}</div>
                   <FaComment className='w-4 h-4 ml-2 mr-1 text-violet-400' />
-                  <div className='text-sm font-semibold text-violet-500'>{post.comments}</div>
+                  <div className='text-sm font-semibold text-violet-500 mr-3'>{post.comments}</div>
                   <CiShare1 className='w-4 h-4 ml-2 mr-1 text-violet-400' />
                 </div>
               </div>
