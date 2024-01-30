@@ -27,8 +27,8 @@ const EducationCard = ({ education, index }) => {
                     <div className='flex flex-col'>
                         <span className='ml-1'>{education.title}</span>
                         <span className='ml-1 font-normal text-[10px] text-violet-600'>{education.from} - {education.to}</span>
-                        <div className='text-xs text-opacity-50 text-violet-500 '>{education.institution}, {education.location}</div>
-                        <div className='text-xs text-violet-500'>{education.description}</div>
+                        <div className='ml-1 text-xs text-opacity-50 text-violet-500 '>{education.institution}, {education.location}</div>
+                        <div className='ml-1 text-xs text-violet-500'>{education.description}</div>
                     </div>
                 </div>
                 <div className='text-sm font-semibold flex flex-row'>
