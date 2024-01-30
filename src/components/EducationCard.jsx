@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MdAdd, MdEdit } from 'react-icons/md'
 import { BiBuildingHouse } from "react-icons/bi";
+import EditEducationCard from './EditEducationCard';
 
-const EducationCard = ({ education }) => {
+const EducationCard = ({ education, index }) => {
+    const [edit, setEdit] = useState(false)
+    const [addNew, setAddNew] = useState(false)
+
+    const addNewEntry = () => {
+        setAddNew(true)
+        setEdit(false)
+    }
+
+    const editEntry = () => {
+        setEdit(true)
+        setAddNew(false)
+    }
+
     return (
         <div className='flex flex-col' key={education.title}>
             <div className='flex flex-row justify-between'>
@@ -18,10 +32,12 @@ const EducationCard = ({ education }) => {
                     </div>
                 </div>
                 <div className='text-sm font-semibold flex flex-row'>
-                    <MdAdd size={16} className='w-5 h-5 text-violet-500 top-0 cursor-pointer' />
-                    <MdEdit size={16} className='w-5 h-5 text-violet-500 top-0 cursor-pointer' />
+                    <MdAdd size={16} className='w-5 h-5 text-violet-500 top-0 cursor-pointer' onClick={addNewEntry} />
+                    <MdEdit size={16} className='w-5 h-5 text-violet-500 top-0 cursor-pointer' onClick={editEntry} />
                 </div>
             </div>
+            {edit && <EditEducationCard education={education} index={index} setFlag={setEdit} />}
+            {addNew && <EditEducationCard index={index} setFlag={setAddNew} />}
         </div>
     )
 }
