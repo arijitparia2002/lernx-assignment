@@ -12,6 +12,8 @@ import Spaces from "./Spaces";
 import Tabs from "./Tabs";
 import WheelOfOpp from "./WheelOfOpp";
 import Skills from "./Skills";
+import Experience from "./Experience";
+import Education from "./Education";
 
 export {
   About,
@@ -28,4 +30,6 @@ export {
   Tabs,
   WheelOfOpp,
   Skills,
+  Experience,
+  Education,
 };

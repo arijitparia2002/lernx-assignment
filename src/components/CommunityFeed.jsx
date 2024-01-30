@@ -16,9 +16,9 @@ const CommunityFeed = () => {
     <div className='w-full px-2 items-center'>
       <div className=" flex flex-col justify-start items-start pb-8  w-[80%]">
         <h3 className=' text-base py-4 text-violet-600 font-semibold'>Communities Feed</h3>
-        <CommunityCard title='Community 1' member='100' />
-        <CommunityCard title='Community 1' member='100' />
-        <CommunityCard title='Community 1' member='100' />
+        <CommunityCard title='Software dev X' member='1200' />
+        <CommunityCard title='MLOps Pro' member='1300' />
+        <CommunityCard title='Gen Ai India' member='3100' />
       </div>
     </div>
   )

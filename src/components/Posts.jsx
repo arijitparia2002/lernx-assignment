@@ -6,7 +6,7 @@ import { MdDelete } from 'react-icons/md'
 const posts = [
   {
     caption: "This is a post caption 1",
-    author: "Author 1",
+    author: "John Doe",
     date: "1 day ago",
     likes: 10,
     comments: 5,
@@ -15,7 +15,7 @@ const posts = [
   },
   {
     caption: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-    author: "Author 2",
+    author: "Steven Smith",
     date: "2 days ago",
     likes: 20,
     comments: 10,

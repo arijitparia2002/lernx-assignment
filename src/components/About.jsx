@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { CiEdit } from 'react-icons/ci'
+import { MdEdit } from 'react-icons/md'
+import { Experience, Education } from './'
 
 
 const About = () => {
@@ -11,12 +12,14 @@ const About = () => {
 
   return (
     <div className='flex flex-col'>
-      <div className='flex flex-row justify-between'>
+      <div className='flex flex-row justify-between px-2 my-1'>
         <div className='text-sm'>{about}</div>
         <div className='text-sm font-semibold'>
-          <CiEdit size={16} className='w-5 h-5 text-violet-500 top-0 cursor-pointer' onClick={() => setEdit((prev) => !prev)} />
+          <MdEdit size={16} className='w-5 h-5 text-violet-500 top-0 cursor-pointer' onClick={() => setEdit((prev) => !prev)} />
         </div>
       </div>
+      <Experience />
+      <Education />
     </div>
   )
 }
