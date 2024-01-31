@@ -1,6 +1,30 @@
-import React from 'react'
+import React,{useState} from 'react'
 import me from "../assets/me.png"
 import { MdOutlinePeople } from "react-icons/md";
+
+const Toggle = () => {
+  const [isToggled, setToggled] = useState(false);
+
+  const handleToggle = () => {
+    setToggled(!isToggled);
+  };
+
+  return (
+    <div
+      className={`relative w-8 h-4 rounded-full p-1 cursor-pointer object-contain ${
+        isToggled ? ' bg-violet-500' : 'bg-gray-300 '
+      }`}
+      onClick={handleToggle}
+    >
+      <div
+        className={`h-full w-3 bg-white rounded-full transform duration-300 ease-in-out ${
+          isToggled ? 'translate-x-full' : ''
+        }`}
+      ></div>
+    </div>
+  );
+};
+
 
 const Profile = () => {
   return (
@@ -18,8 +42,9 @@ const Profile = () => {
             <p className='text-[10px] mr-2'>21 Followers</p>
             <p className='text-[10px]'>100 Following</p>
           </div>
-          <div className='w-full flex flex-row text-center justify-center items-center text-violet-600 font-bold'>
+          <div className='w-full flex flex-row text-center justify-between items-center text-violet-600 font-bold'>
             <p className='text-[10px] mt-4'>Make profile visible to employes</p>
+            <Toggle />
           </div>
           <p className=' text-left text-[7px] text-violet-300 leading-3'>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, id.

@@ -14,7 +14,7 @@ import styles from './styles'
 
 const App = () => {
   return (
-    <div className="bg-violet-100 w-full h-full overflow-hidden">
+    <div className="bg-violet-100 w-full h-screen overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter} bg-white rounded shadow`}>
         <div className={`${styles.boxWidth}`}>
           <Navbar />
