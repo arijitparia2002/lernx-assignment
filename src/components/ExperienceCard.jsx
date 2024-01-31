@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { MdAdd, MdEdit } from 'react-icons/md'
 import { FaBuilding } from "react-icons/fa";
-import EditexperienceCard from './EditexperienceCard';
+import EditExperienceCard from './EditExperienceCard';
 
 const ExperienceCard = ({ experience, index }) => {
     const [edit, setEdit] = useState(false)
@@ -36,8 +36,8 @@ const ExperienceCard = ({ experience, index }) => {
                     <MdEdit size={16} className='w-5 h-5 text-violet-500 top-0 cursor-pointer' onClick={editEntry} />
                 </div>
             </div>
-            {edit && <EditexperienceCard experience={experience} index={index} setFlag={setEdit} />}
-            {addNew && <EditexperienceCard index={index} setFlag={setAddNew} />}
+            {edit && <EditExperienceCard experience={experience} index={index} setFlag={setEdit} />}
+            {addNew && <EditExperienceCard index={index} setFlag={setAddNew} />}
         </div>
     )
 }
