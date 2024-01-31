@@ -4,12 +4,12 @@ const EditExperienceCard = ({ setFlag, index, experience = null }) => {
     const [title, setTitle] = useState(experience?.title || '')
     const [from, setFrom] = useState(experience?.from || '')
     const [to, setTo] = useState(experience?.to || '')
-    const [institution, setInstitution] = useState(experience?.institution || '')
+    const [company, setCompany] = useState(experience?.company || '')
     const [location, setLocation] = useState(experience?.location || '')
     const [description, setDescription] = useState(experience?.description || '')
 
     const handleSave = () => {
-        const newexperience = { title, from, to, institution, location, description }
+        const newexperience = { title, from, to, company, location, description }
         let experiences = JSON.parse(localStorage.getItem('experiences'))
         if (experiences) {
             experiences[index] = newexperience
@@ -34,7 +34,7 @@ const EditExperienceCard = ({ setFlag, index, experience = null }) => {
     }
 
     const handleCreateNew = () => {
-        const newexperience = { title, from, to, institution, location, description }
+        const newexperience = { title, from, to, company, location, description }
         let experiences = JSON.parse(localStorage.getItem('experiences'))
         if (experiences) {
             experiences.push(newexperience)
@@ -58,8 +58,8 @@ const EditExperienceCard = ({ setFlag, index, experience = null }) => {
                 <input type='date' id='from' className='border border-gray-300 rounded-sm p-2 focus:outline-none focus:border-violet-500' value={from} onChange={(e) => setFrom(e.target.value)} />
                 <label htmlFor='to' className='text-sm text-violet-500'>To</label>
                 <input type='date' id='to' className='border border-gray-300 rounded-sm p-2 focus:outline-none focus:border-violet-500' value={to} onChange={(e) => setTo(e.target.value)} />
-                <label htmlFor='institution' className='text-sm text-violet-500'>Company</label>
-                <input type='text' id='institution' className='border border-gray-300 rounded-sm p-2 focus:outline-none focus:border-violet-500' value={institution} onChange={(e) => setInstitution(e.target.value)} />
+                <label htmlFor='company' className='text-sm text-violet-500'>Company</label>
+                <input type='text' id='company' className='border border-gray-300 rounded-sm p-2 focus:outline-none focus:border-violet-500' value={company} onChange={(e) => setCompany(e.target.value)} />
                 <label htmlFor='location' className='text-sm text-violet-500'>Location</label>
                 <input type='text' id='location' className='border border-gray-300 rounded-sm p-2 focus:outline-none focus:border-violet-500' value={location} onChange={(e) => setLocation(e.target.value)} />
                 <label htmlFor='description' className='text-sm text-violet-500'>Description</label>
