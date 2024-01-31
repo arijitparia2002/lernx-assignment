@@ -52,7 +52,7 @@ const EditEducationCard = ({ setFlag, index, education = null }) => {
     return (
         <div className='fixed inset-0 flex items-center justify-center backdrop-blur'>
             {/* editable input + date selection field for everything */}
-            <div className='flex flex-col sm:p-4 rounded bg-white sm:w-1/2 sm:h-auto h-full w-full'>
+            <div className='flex flex-col sm:p-4 rounded bg-white sm:w-1/3 sm:h-auto h-full w-full'>
                 <div className='sm:hidden flex flex-row justify-center items-center py-4'>
                     <BiArrowToLeft className=' absolute left-0 text-[28px] text-violet-600 ml-2' onClick={handleCancel} />
                     <p className="font-bold text-center mr-2 pr-3">{education ? "Edit Education" : "Add Education"}</p>
@@ -64,7 +64,8 @@ const EditEducationCard = ({ setFlag, index, education = null }) => {
                         <Toggle />
                     </div>
                 </div>
-                <div className='flex flex-col p-4 rounded bg-white sm:w-1/2 sm:h-auto h-full w-full'>
+                <div></div>
+                <div className='flex flex-col p-4 rounded bg-white sm:h-auto h-full w-full'>
                     <label htmlFor='title' className='text-sm text-violet-500'>Title</label>
                     <input type='text' id='title' className='border border-gray-300 rounded-sm p-2 focus:outline-none focus:border-violet-500' value={title} onChange={(e) => setTitle(e.target.value)} />
 

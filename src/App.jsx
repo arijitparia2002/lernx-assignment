@@ -11,6 +11,7 @@ import {
   WheelOfOpp,
 } from './components'
 import styles from './styles'
+import MobileBottom from './components/MobileBottom'
 
 const App = () => {
   return (
@@ -34,7 +35,7 @@ const App = () => {
               <div className='w-full object-contain h-[120px]'>
                 <img src="https://t3.ftcdn.net/jpg/00/73/08/22/360_F_73082224_ay4Tus31QNHNmGSIty53ZE6mBrBc47cV.jpg" alt="" className='h-[120px] w-[100%]' />
               </div>
-              <div className='w-full h-[100%] flex sm:flex-row flex-col'>
+              <div className='w-full h-[100%] flex sm:flex-row flex-col sm:mb-0'>
                 <div className='sm:flex hidden flex-col w-[25%] bg-white rounded mr-3'>
                   <Profile />
                   <Links />
@@ -52,6 +53,7 @@ const App = () => {
                 <Tabs />
               </div>
             </div>
+            <MobileBottom />
           </div>
         </div>
       </div>

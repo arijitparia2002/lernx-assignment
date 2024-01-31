@@ -6,7 +6,7 @@ const options = ["About", "Skills & Certifications", "Posts", "Spaces"]
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(0)
   return (
-    <div className='sm:px-2 px-0 mt-3 rounded bg-white w-[100%] shadow flex flex-col'>
+    <div className='sm:px-2 px-0 mt-3 rounded bg-white w-[100%] shadow flex flex-col pb-12 sm:pb-0'>
       <div className='w-full px-6 border-b border-violet-200 h-10 flex flex-row justify-between items-center text-violet-500 font-semibold'>
         {
           options.map((option, index) => (
