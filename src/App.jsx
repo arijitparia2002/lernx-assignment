@@ -15,7 +15,7 @@ import MobileBottom from './components/MobileBottom'
 
 const App = () => {
   return (
-    <div className="bg-violet-100 w-full h-screen overflow-hidden">
+    <div className="bg-violet-100 w-full h-screen sm:overflow-hidden overflow-y-auto">
       <div className={`${styles.paddingX} ${styles.flexCenter} bg-white rounded shadow`}>
         <div className={`${styles.boxWidth}`}>
           <Navbar />
