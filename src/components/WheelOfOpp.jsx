@@ -22,10 +22,10 @@ const CircularRing = () => {
 
 const WheelOfOpp = () => {
   return (
-    <div className='px-2 flex flex-col items-center justify-center p-4 rounded-lg border border-violet-200 bg-violet-200 bg-opacity-45 mt-5 mx-2'>
-      <div className='flex flex-row items-center mb-2'>
-        <span className='text-[10px] font-bold text-violet-500'>Wheel Of Opportunities</span>
-        <MdInfoOutline className='text-[12px] ml-1 text-violet-700' />
+    <div className='px-2 flex flex-col items-center justify-center p-4 rounded-lg border border-violet-200 bg-violet-200 bg-opacity-45 mt-5 mx-2 sm:h-auto sm:w-auto h-[250px] w-[250px]'>
+      <div className='flex flex-row items-center mb-2 justify-center'>
+        <span className='text-[10px] font-bold text-violet-500 text-center'>Wheel Of Opportunities</span>
+        <MdInfoOutline className='sm:block hidden text-[12px] ml-1 text-violet-700' />
       </div>
       <CircularRing />
     </div>

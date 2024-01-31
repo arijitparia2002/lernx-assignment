@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import me from "../assets/me.png"
 import { MdOutlinePeople } from "react-icons/md";
 
-const Toggle = () => {
+export const Toggle = () => {
   const [isToggled, setToggled] = useState(false);
 
   const handleToggle = () => {

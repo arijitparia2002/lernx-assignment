@@ -32,7 +32,7 @@ const Education = () => {
 
     return (
         <div className='flex flex-col w-full my-3'>
-            <p className='text-violet-500 text-sm font-bold py-3 bg-violet-100 px-2 rounded'>Experience</p>
+            <p className='text-violet-500 text-sm font-bold py-3 bg-violet-100 px-2 rounded'>Education</p>
             <div className='flex flex-col mt-3 space-y-3'>
                 {
                     educations.length > 0 ? (
