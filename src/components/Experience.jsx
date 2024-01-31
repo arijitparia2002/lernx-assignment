@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ExperienceCard from './ExperienceCard'
-import EditExperienceCard from './EditExperienceCard'
+import EditexperienceCard from './EditexperienceCard'
 import { MdAdd } from 'react-icons/md'
 
 const dummyExperiences = [
@@ -46,7 +46,7 @@ const Experience = () => {
 
             </div>
             {
-                addNew && <EditExperienceCard index={0} setFlag={setAddNew} />
+                addNew && <EditexperienceCard index={0} setFlag={setAddNew} />
             }
 
         </div>
